@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+  <title>Random Saying Generator</title>
+  <script>
+    const sayings = [
+      "I've returned.",
+      "I'm here again.",
+      "I've come back.",
+      "I've made my way back.",
+      "I've reappeared.",
+      "I'm back in action.",
+      "I've resurfaced.",
+      "I'm back in the game.",
+      "I've returned to the fold.",
+      "I'm back on the scene.",
+      "I'm back"
+    ];
 
-        <script>
-        const sayings = [
-        " I've returned.",
-        " I'm here again.",
-        " I've come back.",
-        " I've made my way back.",
-        " I've reappeared.",
-        " I'm back in action.",
-        " I've resurfaced.",
-        " I'm back in the game.",
-        " I've returned to the fold.",
-        " I'm back on the scene.",
-        " I'm back",
-        ];
-
-        function getRandomSaying() {
-          const randomIndex = Math.floor(Math.random() * sayings.length);
-          return sayings[randomIndex];
-        }
-
-        // Example usage
-        const randomSaying = getRandomSaying();
-        alert(randomSaying);
-        </script>
-
-    </head>
-    <body>
-    </body>
+    function displayRandomSaying() {
+      const randomIndex = Math.floor(Math.random() * sayings.length);
+      document.getElementById('saying').innerText = sayings[randomIndex];
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p id="saying">Click the button to see a random saying.</p>
+  <button onclick="displayRandomSaying()">Generate Saying</button>
+</body>
 </html>
